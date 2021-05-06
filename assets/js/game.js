@@ -9,7 +9,7 @@ var randomNumber = function(min, max) {
 
 var fightOrSkip = function() {
   // ask player if they'd like to fight or skip using fightOrSkip function
-  var promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
+  var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter FIGHT or SKIP to choose.");
 
   // Enter the conditional recursive function call here!
   if (promptFight === "" || promptFight === null) {
@@ -165,20 +165,16 @@ var shop = function(){
    ( "Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one: 'REFILL', 'UPGRADE', or 'LEAVE' to make a choice.");
   
    //use switch to carry out action
+  shopOptionPrompt = parseInt(shopOptionPrompt);
    switch (shopOptionPrompt) {
-      case "refill": // new case
-      case "REFILL":
+      case 1:
         playerInfo.refillHealth();
         break;
-      case "upgrade": //new case
-      case "UPGRADE":
+      case 2:
          playerInfo.upgradeAttack();
           break;
-        case "leave":
-        case "LEAVE":
+        case 3:
           window.alert("Leaving the store.");
-
-          //do nothing, so function will end
           break;
         default:
           window.alert("You did not pick a valid option. Try again.");
